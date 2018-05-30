@@ -33,6 +33,8 @@ function validationRecords()
     }
    
   }
+  window.localStorage.setItem("IsLogin", "true");
+  window.location.href = "home.html";
   return true;
 }
 
@@ -74,7 +76,14 @@ BookIt.Session.getInstance().set({
     
 
 }
-   
+
+$(document).ready(function(){
+ var IsUserLogin=window.localStorage.getItem("IsLogin");
+ if(IsUserLogin=="true")
+ {
+  window.location.href = "home.html";
+ }
+});
 
 
 

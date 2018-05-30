@@ -1,4 +1,4 @@
-var SMSAPIMethod="http://103.16.101.52:8080/bulksms/bulksms?username=sse-hsrphr&password=hsrphr&type=0&dlr=1&destination=8447172743&source=HRHSRP&message= Received Rs. 372 against HSRP For Reg No. HR39D9219 RECEIPT No. HSRR/1819/06609 dated  25/05/2018-HSRP Team ";
+var SMSAPIMethod=" ";
 var isOTPNumberValid=false
 
 function SubmitDataOnSignup()
