@@ -78,10 +78,16 @@ BookIt.Session.getInstance().set({
 }
 
 $(document).ready(function(){
+  
  var IsUserLogin=window.localStorage.getItem("IsLogin");
  if(IsUserLogin=="true")
  {
+   HideDivLoading();
   window.location.href = "home.html";
+ }
+ else
+ {
+  HideDivLoading();
  }
 });
 

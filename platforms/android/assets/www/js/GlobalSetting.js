@@ -23,3 +23,13 @@ var sessionTimeoutInMSec='120';
 var UserDetails={ FirstName:'',LastName:'',EmailAddres:'',
 Password:'',FirstAddress:'',Address:'',FkCityId:'',FkStateId:''
 ,mobileNumber:'',OTP:''};
+
+function ShowDivLoading()
+{
+  $("#divLoading").addClass('show').removeClass('hide');
+}
+
+function HideDivLoading()
+{
+  $("#divLoading").addClass('hide').removeClass('show');
+}
