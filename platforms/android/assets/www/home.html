@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>App Design</title>
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet"> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/custom.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function () {
+
+
+    //stick in the fixed 100% height behind the navbar but don't wrap it
+    $('#slide-nav.navbar-inverse').after($('<div class="inverse" id="navbar-height-col"></div>'));
+  
+    $('#slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));  
+
+    // Enter your ids or classes
+    var toggler = '.navbar-toggle';
+    var pagewrapper = '#page-content';
+    var navigationwrapper = '.navbar-header';
+    var menuwidth = '100%'; // the menu inside the slide menu itself
+    var slidewidth = '80%';
+    var menuneg = '-100%';
+    var slideneg = '-80%';
+
+
+    $("#slide-nav").on("click", toggler, function (e) {
+
+        var selected = $(this).hasClass('slide-active');
+
+        $('#slidemenu').stop().animate({
+            left: selected ? menuneg : '0px'
+        });
+
+        $('#navbar-height-col').stop().animate({
+            left: selected ? slideneg : '0px'
+        });
+
+        $(pagewrapper).stop().animate({
+            left: selected ? '0px' : slidewidth
+        });
+
+        $(navigationwrapper).stop().animate({
+            left: selected ? '0px' : slidewidth
+        });
+
+
+        $(this).toggleClass('slide-active', !selected);
+        $('#slidemenu').toggleClass('slide-active');
+
+
+        $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
+
+
+    });
+
+
+    var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
+
+
+    $(window).on("resize", function () {
+
+        if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
+            $(selected).removeClass('slide-active');
+        }
+
+
+    });
+
+
+
+
+});
+</script>
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">
+  <div class="container">
+   <div class="navbar-header">
+    <a class="navbar-toggle"> 
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+     </a>
+    <a class="navbar-brand" href="home.html">IandE</a>
+    <label class="navbar-brand" id="balanceId">02.5</label>
+    <a class="navbar-brand" onclick="navigateToLoginPage()" href="#">Logout</a>
+    
+    
+   </div>
+   <div id="slidemenu">
+     
+          
+    
+    <ul class="nav navbar-nav">
+     <li class="active" style="margin-top:10px;"><a href="#">Home</a></li>
+     <li><a href="#about">About</a></li>
+     <li><a href="#contact">Contact</a></li>
+     <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+       <li><a href="#">Action</a></li>
+       <li><a href="#">Another action</a></li>
+       <li><a href="#">Something else here</a></li>
+      	
+      </ul>
+     </li>
+    </ul>
+          
+   </div>
+  </div>
+ </div>
+ 
+ 
+ 
+ <div id="page-content">
+   
+  <div class="content_grid">
+  <img src="img/ico1.png" />
+  <h2>Best User</h2>
+  </div>
+  
+  <div class="content_grid">
+  <img src="img/ico2.png" />
+  <h2>More Earning</h2>
+  </div>
+  
+  <div class="content_grid">
+  <img src="img/ico3.png" />
+  <h2>Lucky Draw</h2>
+  </div>
+  
+  <div class="content_grid">
+  <img src="img/ico4.png" />
+  <h2>Offer</h2>
+  </div>
+  
+  <div class="content_grid">
+  <img src="img/ico5.png" />
+  <h2>Earning</h2>
+
+
+  </div>
+  
+
+
+  <div class="content_grid">
+  <img src="img/ico6.png" />
+  <h2>Join Us</h2>
+  </div>
+  
+  
+  <!-- /.container -->
+  
+ </div>
+
+
+<footer>
+
+
+<div class="bottom_icon active"><a  href="home.html"><img src="img/home.png" /></a></div><div class="bottom_icon"><a href="Commingsoon.html"><img src="img/settings.png" /></a></div><div class="bottom_icon"><a href="aboutuser.html"><img src="img/avatar.png" /></a></div>
+
+
+</footer>
+<script src="js/home.js"></script>
+</body>
+</html>

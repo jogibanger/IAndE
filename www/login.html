@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>App Design</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="css/custom.css" />
+
+
+<script src="js/login.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body   class="bg_gradient">
+
+<div class="smrt_container">
+<div class="logo">
+<img src="img/logo.png" />
+</div>
+<!-- Textfield with Floating Label -->
+
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" required type="text" text="asdf@gmail.com" id="EmailId">
+    <label class="mdl-textfield__label" for="EmailId">Email ID</label>
+    <span id="spanEmailId" class="mdl-textfield__error"></span>
+    
+    
+  </div>
+</form>
+
+<!-- Numeric Textfield with Floating Label -->
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" required type="password" text="asdfasdfas" pattern="-?[0-9]*(\.[0-9]+)?" id="txtpassword">
+    <label class="mdl-textfield__label" >Password</label>
+    <span id="spanpassword" class="mdl-textfield__error"></span>
+  </div>
+</form>
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <label id="lblValidationSummary" class="" ></label>
+  
+  </div>
+</form>
+
+<br />
+
+<!-- Accent-colored raised button with ripple -->
+<button type="button" id="btnLoginSubmit" onclick ="deviceReady()"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  Login
+</button>
+<br />
+<button class="btn_reg" onclick="RegisterUser()">Register Here</button>
+</div>
+<script src="js/validation.js"></script>
+<script src="js/signup-Contoller.js"></script>
+</body>
+</html>
