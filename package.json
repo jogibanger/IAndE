@@ -1,28 +1,30 @@
 {
-    "name": "com.example.hello",
-    "displayName": "IandE",
-    "version": "1.0.0",
-    "description": "A sample Apache Cordova application that responds to the deviceready event.",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "com.example.hello",
+  "displayName": "IandE",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cordova-android": "git+https://github.com/apache/cordova-android.git#6.2.2",
+    "cordova-browser": "^5.0.3",
+    "cordova-plugin-browsersync": "^1.1.0",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "cordova-plugin-x-toast": "^2.6.2"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-browsersync": {},
+      "cordova-plugin-x-toast": {}
     },
-    "author": "Apache Cordova Team",
-    "license": "Apache-2.0",
-    "dependencies": {
-        "cordova-android": "git+https://github.com/apache/cordova-android.git#6.2.2",
-        "cordova-browser": "^5.0.3",
-        "cordova-plugin-browsersync": "^1.1.0",
-        "cordova-plugin-whitelist": "^1.3.3"
-    },
-    "cordova": {
-        "plugins": {
-            "cordova-plugin-whitelist": {},
-            "cordova-plugin-browsersync": {}
-        },
-        "platforms": [
-            "android",
-            "browser"
-        ]
-    }
+    "platforms": [
+      "android",
+      "browser"
+    ]
+  }
 }

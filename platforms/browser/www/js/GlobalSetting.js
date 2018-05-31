@@ -24,12 +24,24 @@ var UserDetails={ FirstName:'',LastName:'',EmailAddres:'',
 Password:'',FirstAddress:'',Address:'',FkCityId:'',FkStateId:''
 ,mobileNumber:'',OTP:''};
 
-function ShowDivLoading()
+function ShowAndHideDivLoading()
 {
+  if($("#divLoading").hasClass('hide'))
+  {
   $("#divLoading").addClass('show').removeClass('hide');
+  }
+  else
+  {
+    $("#divLoading").addClass('hide').removeClass('show');
+  }
 }
 
 function HideDivLoading()
 {
-  $("#divLoading").addClass('hide').removeClass('show');
+     debugger
+    $("#divLoading").addClass('hide').removeClass('show');
+ 
 }
+
+
+

@@ -77,19 +77,33 @@ BookIt.Session.getInstance().set({
 
 }
 
+window.onload=init;
+function init(){
+  console.log('Load Init ready');
+}
 $(document).ready(function(){
+   console.log('Device Ready');
+ 
+});
+document.addEventListener('DOMContentLoaded', function() {
   
- var IsUserLogin=window.localStorage.getItem("IsLogin");
+  var IsUserLogin=window.localStorage.getItem("IsLogin");
  if(IsUserLogin=="true")
  {
-   HideDivLoading();
+  setTimeout(ShowAndHideDivLoading, 2000);
   window.location.href = "home.html";
  }
  else
  {
-  HideDivLoading();
+  setTimeout(ShowAndHideDivLoading, 2000);
  }
+  console.log('DOMContentLoaded login');
+  document.getElementById("btnLoginSubmit").addEventListener("click", function() { winPrize();
+  }, false);
 });
+
+
+
 
 
 
