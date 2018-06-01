@@ -1,8 +1,10 @@
 var lastTimeBackPress=0;
 var timePeriodToExit=2000;
 
-function onBackKeyDown(e){
-    debugger
+function onBackKeyDown(){
+
+    navigator.app.exitApp();
+
     e.preventDefault();
     e.stopPropagation();
     if(new Date().getTime() - lastTimeBackPress < timePeriodToExit){
@@ -16,22 +18,18 @@ function onBackKeyDown(e){
               addPixelsY: -40  // added a negative value to move it up a bit (default 0)
             }
           );
-        
+
         lastTimeBackPress=new Date().getTime();
     }
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('App exit call');
-    document.addEventListener("onBackKeyDown", function(e){
-        alert(window.location.href)
-        if($.mobile.activePage.is('#homepage')){
-            e.preventDefault();
-            navigator.app.exitApp();
+function Onload(){
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+    };
+    function onDeviceReady() {
+
+        setTimeout(HideDivLoading, 2000);
+
+        document.addEventListener("backbutton", onBackKeyDown, false);
         }
-        else {
-            navigator.app.backHistory();
-        }
-     }, false)
-    
-    });

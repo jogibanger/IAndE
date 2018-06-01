@@ -81,7 +81,7 @@ $(document).ready(function () {
 </script>
 </head>
 
-<body>
+<body onload="Onload()">
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">
   <div class="container">
    <div class="navbar-header">
@@ -168,9 +168,14 @@ $(document).ready(function () {
 
     <div class="bottom_icon active"><a  href="home.html"><img src="img/home.png" /></a></div><div class="bottom_icon"><a href="AppSetting.html"><img src="img/settings.png" /></a></div><div class="bottom_icon"><a href="userSetting.html"><img src="img/avatar.png" /></a></div>
 
+    <div class="show" id="divLoading"> 
 </footer>
+
+<script type="text/javascript" src="cordova.js"></script>
 <script src="js/home.js"></script>
 <script src="js/App-Exit.js"></script>
-<script src="js/App-Exit.js"></script>
+<script src="js/GlobalSetting.js"></script>
+
+
 </body>
 </html>

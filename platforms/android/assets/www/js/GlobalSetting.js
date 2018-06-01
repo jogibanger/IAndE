@@ -38,7 +38,7 @@ function ShowAndHideDivLoading()
 
 function HideDivLoading()
 {
-     debugger
+    
     $("#divLoading").addClass('hide').removeClass('show');
  
 }

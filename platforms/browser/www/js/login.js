@@ -2,13 +2,9 @@ function RegisterUser()
 {
     window.location.href = "signup.html";
 }
-
-
 //Global Veriables
 var temptxtpassword='';
 var temptxtEmailId='';
-
-
 function validationRecords()
 {
   
@@ -37,10 +33,7 @@ function validationRecords()
   window.location.href = "home.html";
   return true;
 }
-
-
-
-function deviceReady() {
+function LoginUserDetails() {
  
     	//disable the button so we can't resubmit while we wait
       $("#btnLoginSubmit").attr("disabled","disabled");
@@ -73,37 +66,13 @@ BookIt.Session.getInstance().set({
         }
         return false;
       }
-    
-
 }
-
-window.onload=init;
-function init(){
-  console.log('Load Init ready');
-}
-$(document).ready(function(){
-   console.log('Device Ready');
- 
-});
-document.addEventListener('DOMContentLoaded', function() {
-  
+document.addEventListener('DOMContentLoaded', function() {  
   var IsUserLogin=window.localStorage.getItem("IsLogin");
  if(IsUserLogin=="true")
  {
-  setTimeout(ShowAndHideDivLoading, 2000);
   window.location.href = "home.html";
  }
- else
- {
-  setTimeout(ShowAndHideDivLoading, 2000);
- }
-  console.log('DOMContentLoaded login');
-  document.getElementById("btnLoginSubmit").addEventListener("click", function() { winPrize();
-  }, false);
+ 
+  
 });
-
-
-
-
-
-

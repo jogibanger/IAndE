@@ -19,7 +19,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body   class="bg_gradient">
+<body onload="Onload()"   class="bg_gradient">
 
 <div class="smrt_container">
 <div class="logo">
@@ -55,12 +55,13 @@
 <br />
 
 <!-- Accent-colored raised button with ripple -->
-<button type="button" id="btnLoginSubmit" onclick ="deviceReady()"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+<button type="button" id="btnLoginSubmit" onclick ="LoginUserDetails()"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
   Login
 </button>
 <br />
 <button class="btn_reg" onclick="RegisterUser()">Register Here</button>
 </div>
+<script type="text/javascript" src="cordova.js"></script>
 <script src="js/validation.js"></script>
 <script src="js/signup-Contoller.js"></script>
 <script src="js/GlobalSetting.js"></script>
