@@ -3,8 +3,7 @@ var timePeriodToExit=2000;
 
 function onBackKeyDown(){
 
-    navigator.app.exitApp();
-
+   
     e.preventDefault();
     e.stopPropagation();
     if(new Date().getTime() - lastTimeBackPress < timePeriodToExit){
@@ -28,6 +27,7 @@ function Onload(){
     document.addEventListener("deviceready", onDeviceReady, false);
     };
     function onDeviceReady() {
+        alert(window.location.pathname);
 
         setTimeout(HideDivLoading, 2000);
 
