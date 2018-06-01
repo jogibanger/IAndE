@@ -3,8 +3,7 @@ var timePeriodToExit=2000;
 
 function onBackKeyDown(){
 
-    navigator.app.exitApp();
-
+   
     e.preventDefault();
     e.stopPropagation();
     if(new Date().getTime() - lastTimeBackPress < timePeriodToExit){
