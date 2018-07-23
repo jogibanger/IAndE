@@ -52,14 +52,14 @@
             encoderParameters.Param[0] = encoderParameter;
             newImage.Save(filePath, imageCodecInfo, encoderParameters);
 
-            string TempStringValue= this.ConvertToImageBASE64(@"C:\Project\Testing\FileUpload\FileUpload\ImagePath\" + "test1.jpeg");
+            byte[] testData= this.ConvertToImageBASE64(@"C:\Project\Testing\FileUpload\FileUpload\ImagePath\" + "test1.jpeg");
         }
         private ImageCodecInfo GetEncoderInfo(ImageFormat format)
         {
             return ImageCodecInfo.GetImageDecoders().SingleOrDefault(c => c.FormatID == format.Guid);
         }
 
-        private string ConvertToImageBASE64(string Path)
+        private byte[] ConvertToImageBASE64(string Path)
         {
 
             using (System.Drawing.Image image = System.Drawing.Image.FromFile(Path))
@@ -70,8 +70,8 @@
                     byte[] imageBytes = m.ToArray();
 
                     // Convert byte[] to Base64 String
-                    string base64String = Convert.ToBase64String(imageBytes);
-                    return base64String;
+                   // string base64String = Convert.ToBase64String(imageBytes);
+                    return imageBytes;
                 }
             }
         }
